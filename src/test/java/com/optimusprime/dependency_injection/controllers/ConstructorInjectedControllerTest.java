@@ -6,18 +6,18 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class ContructorInjectedControllerTest {
+public class ConstructorInjectedControllerTest {
 
-    private ContructorInjectedController contructorInjectedController;
+    private ConstructorInjectedController constructorInjectedController;
 
     @Before
     public void setUp() throws Exception {
-        this.contructorInjectedController = new ContructorInjectedController(new GreetingServiceImpl());
+        this.constructorInjectedController = new ConstructorInjectedController(new GreetingServiceImpl());
     }
 
     @Test
     public void sayHello() throws Exception {
-        assertEquals(GreetingServiceImpl.HELLO_OPTIMUS, contructorInjectedController.sayHello());
+        assertEquals(GreetingServiceImpl.HELLO_OPTIMUS, constructorInjectedController.sayHello());
     }
 
 }
