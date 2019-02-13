@@ -12,6 +12,6 @@ public class PrimarySpanishGreetingServiceImpl implements  GreetingService{
 
     @Override
     public String sayGreeting() {
-        return "This is spanish greeting service!";
+        return "Hola de frijol primario";
     }
 }
