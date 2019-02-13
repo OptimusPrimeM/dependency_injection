@@ -18,7 +18,7 @@ public class SetterInjectedControllerTest {
 
     @Test
     public void sayHello() throws Exception {
-        assertEquals(GreetingServiceImpl.HELLO_OPTIMUS, setterInjectedController.sayHello());
+        assertEquals(GreetingServiceImpl.HELLO_FROM_PROPERTY_BASED, setterInjectedController.sayHello());
     }
 
 }
