@@ -1,6 +1,6 @@
 package com.optimusprime.dependency_injection.controllers;
 
-import com.optimusprime.dependency_injection.services.ChuckNorrisJokes;
+import com.optimusprime.component_scan.services.ChuckNorrisJokes;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -7,8 +7,10 @@ import com.optimusprime.dependency_injection.controllers.SetterInjectedControlle
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages = {"com.optimusprime.component_scan.services.","com.optimusprime.dependency_injection"})
 public class DependencyInjectionApplication {
 
 	public static void main(String[] args) {

@@ -1,7 +1,6 @@
-package com.optimusprime.dependency_injection.services;
+package com.optimusprime.component_scan.services;
 
 import com.optimusprime.dependency_injection.config.ChuckNorrisConfig;
-import guru.springframework.norris.chuck.ChuckNorrisQuotes;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -15,8 +14,6 @@ public class ChuckNorrisJokesImpl implements ChuckNorrisJokes {
 
     @Override
     public String getRandomQuote() {
-        System.out.println("sasasasasssssssssssss");
-
         String joke = chuckNorrisConfig.getCheckNorrisBean().getRandomQuote();
         return joke;
     }

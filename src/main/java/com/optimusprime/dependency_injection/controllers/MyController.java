@@ -1,6 +1,6 @@
 package com.optimusprime.dependency_injection.controllers;
 
-import com.optimusprime.dependency_injection.services.GreetingService;
+import com.optimusprime.component_scan.services.GreetingService;
 import org.springframework.stereotype.Controller;
 
 @Controller
