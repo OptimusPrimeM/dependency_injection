@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
-//@ImportResource("classpath:chuck-config.xml")
+@ImportResource("classpath:chuck-config.xml")
 public class DependencyInjectionApplication {
 
 	public static void main(String[] args) {
