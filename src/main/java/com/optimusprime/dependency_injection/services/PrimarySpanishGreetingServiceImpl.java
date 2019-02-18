@@ -1,16 +1,17 @@
-package com.optimusprime.component_scan.services;
+package com.optimusprime.dependency_injection.services;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
-@Profile("ge")
+@Profile("es")
 @Primary
-public class PrimaryGermanGreetingServiceImpl implements  GreetingService {
+public class PrimarySpanishGreetingServiceImpl implements  GreetingService{
+
 
     @Override
     public String sayGreeting() {
-        return "Hallo von der Hauptbohne!";
+        return "Hola de frijol primario";
     }
 }

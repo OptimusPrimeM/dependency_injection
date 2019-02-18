@@ -1,6 +1,6 @@
 package com.optimusprime.dependency_injection.controllers;
 
-import com.optimusprime.component_scan.services.GreetingService;
+import com.optimusprime.dependency_injection.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;

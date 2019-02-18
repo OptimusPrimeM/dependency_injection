@@ -1,4 +1,4 @@
-package com.optimusprime.component_scan.services;
+package com.optimusprime.dependency_injection.services;
 
 import org.springframework.stereotype.Service;
 

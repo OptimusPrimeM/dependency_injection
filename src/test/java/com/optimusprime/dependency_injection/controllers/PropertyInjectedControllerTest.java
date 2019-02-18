@@ -1,6 +1,6 @@
 package com.optimusprime.dependency_injection.controllers;
 
-import com.optimusprime.component_scan.services.GreetingServiceImpl;
+import com.optimusprime.dependency_injection.services.GreetingServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -10,7 +10,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.optimusprime.component_scan.services.","com.optimusprime.dependency_injection"})
+@ComponentScan(basePackages = {"com.optimusprime.dependency_injection.services.","com.optimusprime.dependency_injection"})
 public class DependencyInjectionApplication {
 
 	public static void main(String[] args) {
