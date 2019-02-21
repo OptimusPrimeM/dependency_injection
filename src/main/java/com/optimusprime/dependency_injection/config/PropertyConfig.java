@@ -1,15 +1,25 @@
 package com.optimusprime.dependency_injection.config;
 
 import com.optimusprime.dependency_injection.examplebeans.FakeDataSource;
+import com.optimusprime.dependency_injection.examplebeans.FakeJMSDataSource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.core.env.Environment;
 
 @Configuration
-@PropertySource("classpath:datasource.properties")
+@PropertySources({
+        @PropertySource("classpath:datasource.properties"),
+        @PropertySource("classpath:jms.properties")
+})
 public class PropertyConfig {
+
+    @Autowired
+    Environment env;
 
     @Value("${optimus.username}")
     String username;
@@ -21,20 +31,43 @@ public class PropertyConfig {
     String url;
 
 
+    @Value("${optimus.jms.username}")
+    String jmsUsername;
+
+    @Value("${optimus.jms.password}")
+    String jmsPassword;
+
+    @Value("${optimus.jms.url}")
+    String jmsUrl;
+
+
     @Bean
-    public FakeDataSource fakeDataSource(){
+    public FakeDataSource fakeDataSource() {
 
         FakeDataSource fakeDataSource = new FakeDataSource();
-        fakeDataSource.setUsername(username);
+        fakeDataSource.setUsername(env.getProperty("USERNAME"));
         fakeDataSource.setPassword(password);
-        fakeDataSource.setDburl(username);
+        fakeDataSource.setDburl(url);
 
         return fakeDataSource;
-
     }
 
+
     @Bean
-    public static PropertySourcesPlaceholderConfigurer  properties(){
+    public FakeJMSDataSource fakeJMSDataSource() {
+
+        FakeJMSDataSource fakeJMSDataSource = new FakeJMSDataSource();
+        fakeJMSDataSource.setUsername(jmsUsername);
+        fakeJMSDataSource.setPassword(jmsPassword);
+        fakeJMSDataSource.setDburl(jmsUrl);
+
+        return fakeJMSDataSource;
+    }
+
+
+
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer properties() {
         PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
         return propertySourcesPlaceholderConfigurer;
     }
