@@ -3,3 +3,10 @@ optimus:
     username: Optimus_JMS
     password: prime12345_JMS
     url: cyberton_cube_JMS
+
+---
+spring:
+    profiles: ge
+optimus:
+    jms:
+        username: Optimus_JMS_active_profile
