@@ -1,0 +1,38 @@
+# This is a comment
+
+name: Optimus
+
+# This will create array of names
+names:
+    -Optimus
+    -Prime
+
+pound_sign: #Comment
+    -'#'
+
+# Complex objects
+Autobots:
+    leader: Optimus Prime
+    planet: Cybertron
+
+
+# Boolean values
+
+truth: yes
+
+another_truth: True
+
+more_true: true
+
+string_val: "This is it's quote"
+
+include_new_lines: |
+  aaa bbb ccc
+  ddd eee fff
+  ggg hhh iii
+
+
+ignore_new_lines: >
+  aaa bbb ccc
+  ddd eee fff
+  ggg hhh iii

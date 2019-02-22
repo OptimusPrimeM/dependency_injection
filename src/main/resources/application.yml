@@ -1,0 +1,5 @@
+optimus:
+  jms:
+    username: Optimus_JMS
+    password: prime12345_JMS
+    url: cyberton_cube_JMS
